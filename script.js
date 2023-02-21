@@ -1,5 +1,8 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
+const cont = document.getElementById('contador');
+
+let contador = 0;
 
 const jump = () => {
    mario.classList.add('jump');
@@ -26,6 +29,9 @@ const loop = setInterval(() => {
         mario.style.width = '300px'
 
         clearInterval(loop);
+    } else{
+      contador++;
+      cont.innerHTML = contador;
     }
 }, 10);
 
