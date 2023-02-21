@@ -1,6 +1,8 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 const cont = document.getElementById('contador');
+const restart = document.getElementById('restart');
+const restartButton = document.getElementById('gameRestart');
 
 let contador = 0;
 
@@ -11,6 +13,14 @@ const jump = () => {
     mario.classList.remove('jump');
    }, 500);
 }
+
+ function restartGame (){
+    restart.style.display = "block";
+ }
+
+ function recomecar (){
+    window.location.reload(true);
+ }
 
 const loop = setInterval(() => {
      
@@ -28,6 +38,8 @@ const loop = setInterval(() => {
         mario.src = './Assets/gameover.png';
         mario.style.width = '300px'
 
+        restartGame();
+
         clearInterval(loop);
     } else{
       contador++;
@@ -36,3 +48,4 @@ const loop = setInterval(() => {
 }, 10);
 
 document.addEventListener('keydown', jump);
+restartButton.addEventListener('click', recomecar);

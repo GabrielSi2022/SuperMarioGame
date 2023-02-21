@@ -53,6 +53,17 @@
     font-size: 20px;
 }
 
+#restart{
+    display:none;
+}
+
+#gameRestart{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    padding: 10px 30px;
+}
+
 
 @keyframes pipe-animation {
 
